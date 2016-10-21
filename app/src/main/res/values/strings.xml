@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">NYTimeSearch</string>
+    <string name="hint">Enter Search Query</string>
+    <string name="search">Search</string>
+    <string name="fashion_style">Fashion &amp; Style</string>
+    <string name="arts">Arts</string>
+</resources>

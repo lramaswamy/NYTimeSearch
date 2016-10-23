@@ -2,6 +2,8 @@ package com.example.lramaswamy.nytimesearch.Adapters;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
+import android.support.v7.content.res.AppCompatResources;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,10 +11,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.lramaswamy.nytimesearch.Activities.ArticleActivity;
 import com.example.lramaswamy.nytimesearch.Models.Article;
 import com.example.lramaswamy.nytimesearch.R;
-import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -49,12 +51,11 @@ public class ArticleRecyclerAdapter extends RecyclerView.Adapter<ArticleRecycler
         //get the data model for this position
         Article article = mArticles.get(position);
 
+        Drawable noImage = AppCompatResources.getDrawable(mContext, R.drawable.camera_off);
         holder.tvHeadlines.setText(article.getHeadline());
-//        if(article.getThumbnail()== null) {
-//            Picasso.with(mContext).load(R.mipmap.no_image).into(holder.imageView);
-//        } else
-            Picasso.with(mContext).load(article.getThumbnail()).placeholder(R.mipmap.no_image).into(holder.imageView);
-
+        Glide.with(mContext)
+                .load(article.getThumbnail())
+                .placeholder(noImage).into(holder.imageView);
     }
 
     @Override

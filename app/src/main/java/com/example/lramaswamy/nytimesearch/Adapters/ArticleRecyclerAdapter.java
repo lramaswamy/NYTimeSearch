@@ -85,6 +85,7 @@ public class ArticleRecyclerAdapter extends RecyclerView.Adapter<ArticleRecycler
             Intent activityIntent = new Intent(context, ArticleActivity.class);
             Article article = mArticles.get(getAdapterPosition());
             activityIntent.putExtra("url", article.getWebUrl());
+            activityIntent.putExtra("title", article.getHeadline());
             context.startActivity(activityIntent);
         }
     }

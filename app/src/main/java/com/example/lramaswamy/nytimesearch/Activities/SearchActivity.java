@@ -20,7 +20,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import com.example.lramaswamy.nytimesearch.Adapters.ArticleRecyclerAdapter;
 import com.example.lramaswamy.nytimesearch.Decorators.SpacesItemDecoration;
@@ -114,7 +113,7 @@ public class SearchActivity extends AppCompatActivity implements SearchFilterFra
 
             @Override
             public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
-                Toast.makeText(getApplicationContext(), "Fail", Toast.LENGTH_SHORT).show();
+                throwable.printStackTrace();
             }
         });
 
@@ -149,7 +148,6 @@ public class SearchActivity extends AppCompatActivity implements SearchFilterFra
         String url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
         RequestParams params = buildParams(pageValue);
         rvScrollListener.resetState();
-        Toast.makeText(view.getContext(), client.getUrlWithQueryString(true, url, params), Toast.LENGTH_LONG).show();
 
         Log.d("Query String", client.getUrlWithQueryString(true, url, params));
 
@@ -235,7 +233,7 @@ public class SearchActivity extends AppCompatActivity implements SearchFilterFra
         // Customize searchview text and hint colors
         int searchEditId = android.support.v7.appcompat.R.id.search_src_text;
         EditText et = (EditText) searchView.findViewById(searchEditId);
-        et.setTextColor(Color.RED);
+        et.setTextColor(Color.DKGRAY);
         et.setHintTextColor(Color.BLACK);
 
         searchItem.expandActionView();

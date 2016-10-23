@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.lramaswamy.nytimesearch.Activities.ArticleActivity;
 import com.example.lramaswamy.nytimesearch.Models.Article;
@@ -86,7 +85,6 @@ public class ArticleRecyclerAdapter extends RecyclerView.Adapter<ArticleRecycler
             Intent activityIntent = new Intent(context, ArticleActivity.class);
             Article article = mArticles.get(getAdapterPosition());
             activityIntent.putExtra("url", article.getWebUrl());
-            Toast.makeText(context, article.getWebUrl(), Toast.LENGTH_LONG).show();
             context.startActivity(activityIntent);
         }
     }

@@ -21,7 +21,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 
-import com.example.lramaswamy.nytimesearch.Adapters.ArticleRecyclerAdapter;
+import com.example.lramaswamy.nytimesearch.Adapters.ArticleComplexRecyclerViewAdapter;
 import com.example.lramaswamy.nytimesearch.Decorators.SpacesItemDecoration;
 import com.example.lramaswamy.nytimesearch.Fragments.SearchFilterFragment;
 import com.example.lramaswamy.nytimesearch.Listeners.EndlessRecyclerViewScrollListener;
@@ -46,7 +46,8 @@ public class SearchActivity extends AppCompatActivity implements SearchFilterFra
 
 
     ArrayList<Article> articles;
-    ArticleRecyclerAdapter adapter;
+    //ArticleRecyclerAdapter adapter;
+    ArticleComplexRecyclerViewAdapter adapter;
     String query;
     RecyclerView rvArticles;
     EndlessRecyclerViewScrollListener rvScrollListener;
@@ -63,11 +64,12 @@ public class SearchActivity extends AppCompatActivity implements SearchFilterFra
         //Create the recycler view
         rvArticles = (RecyclerView) findViewById(R.id.rvArticle);
         //Set adapter on the recycler view for the articles model view
-        adapter = new ArticleRecyclerAdapter(articles, this);
+        //adapter = new ArticleRecyclerAdapter(articles, this);
+        adapter = new ArticleComplexRecyclerViewAdapter(articles);
         rvArticles.setAdapter(adapter);
         //Add the decoration for better spacing
         SpacesItemDecoration decoration = new SpacesItemDecoration(30);
-        rvArticles.addItemDecoration(decoration);
+        //rvArticles.addItemDecoration(decoration);
         //Create the staggered grid layout and add to the recycler view
         gridLayoutManager =
                 new StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL);

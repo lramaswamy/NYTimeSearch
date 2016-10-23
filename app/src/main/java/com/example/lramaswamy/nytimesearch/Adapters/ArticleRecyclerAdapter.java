@@ -20,6 +20,7 @@ import java.util.List;
 
 /**
  * Created by lramaswamy on 10/18/16.
+ * Not used anymore...keeping it around for reference
  */
 
 public class ArticleRecyclerAdapter extends RecyclerView.Adapter<ArticleRecyclerAdapter.ViewHolder>{

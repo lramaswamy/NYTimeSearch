@@ -51,10 +51,10 @@ public class ArticleRecyclerAdapter extends RecyclerView.Adapter<ArticleRecycler
         Article article = mArticles.get(position);
 
         holder.tvHeadlines.setText(article.getHeadline());
-        if(article.getThumbnail()== null) {
-            Picasso.with(mContext).load(R.mipmap.no_image).into(holder.imageView);
-        } else
-            Picasso.with(mContext).load(article.getThumbnail()).into(holder.imageView);
+//        if(article.getThumbnail()== null) {
+//            Picasso.with(mContext).load(R.mipmap.no_image).into(holder.imageView);
+//        } else
+            Picasso.with(mContext).load(article.getThumbnail()).placeholder(R.mipmap.no_image).into(holder.imageView);
 
     }
 

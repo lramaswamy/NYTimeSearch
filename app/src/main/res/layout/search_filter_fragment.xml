@@ -8,17 +8,47 @@
     android:id="@+id/search_filter">
 
 
+    <TextView
+        android:text="Begin Date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvBeginDate"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:layout_alignParentTop="true"
+        />
+
+    <TextView
+        android:text="Sort Order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvSortOrder"
+        android:layout_below="@id/tvBeginDate"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        />
+
     <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:entries="@array/sortOrder_arrays"
         android:id="@+id/spSortOrder"
-        android:layout_alignBottom="@+id/tvSortOrder"
         android:layout_alignLeft="@+id/cbArts"
-        android:layout_alignStart="@+id/cbArts" />
+        android:layout_alignStart="@+id/cbArts"
+        android:layout_below="@id/tvBeginDate"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"/>
+
+
+    <TextView
+        android:text="News Desk Values"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:id="@+id/tvNewsdesk"
+        android:layout_below="@+id/tvSortOrder"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <CheckBox
-        android:text="CheckBox"
+        android:text="Sports"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/cbfashionStyle"
@@ -46,46 +76,39 @@
         android:layout_toRightOf="@+id/tvNewsdesk"
         android:layout_toEndOf="@+id/tvNewsdesk" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        tools:text="Sort Order"
-        android:id="@+id/editText"
-        android:layout_alignParentTop="true"
-        android:layout_alignLeft="@+id/spSortOrder"
-        android:layout_alignStart="@+id/spSortOrder"
-        android:onClick="launchDatePicker"/>
 
-    <TextView
-        android:text="Begin Date"
+    <EditText
+        tools:text="Begin Date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/tvBeginDate"
-        android:layout_alignBottom="@+id/editText"
+        android:id="@+id/etBeginDate"
+        android:textSize="13dp"
+        android:layout_alignBaseline="@+id/tvBeginDate"
+        android:layout_alignBottom="@+id/tvBeginDate"
+        android:layout_alignLeft="@+id/cbSports"
+        android:layout_alignStart="@+id/cbSports" />
+
+
+    <Button
+        android:text="Cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnCancel"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_marginTop="7dp"
+        android:layout_below="@+id/cbSports"
+        android:layout_toRightOf="@+id/tvNewsdesk"
+        android:layout_toEndOf="@+id/tvNewsdesk" />
+
+    <Button
+        android:text="OK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnOK"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_alignBaseline="@+id/btnCancel"
+        android:layout_alignBottom="@+id/btnCancel"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
-
-    <TextView
-        android:text="Sort Order"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:id="@+id/tvSortOrder"
-        android:layout_below="@+id/tvBeginDate"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:text="News Desk Values"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="27dp"
-        android:id="@+id/tvNewsdesk"
-        android:layout_below="@+id/tvSortOrder"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
 
 </RelativeLayout>

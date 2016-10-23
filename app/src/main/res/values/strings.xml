@@ -4,4 +4,5 @@
     <string name="search">Search</string>
     <string name="fashion_style">Fashion &amp; Style</string>
     <string name="arts">Arts</string>
+    <string name="snackbar.text">No Internet Connection!!!</string>
 </resources>

@@ -59,11 +59,11 @@ public class ArticleComplexRecyclerViewAdapter extends RecyclerView.Adapter<Recy
 
         switch (viewType) {
             case HEADLINE:
-                View v1 = inflater.inflate(R.layout.layout_viewholder1, parent, false);
+                View v1 = inflater.inflate(R.layout.article_text_only, parent, false);
                 viewHolder = new ViewHolder1(parent.getContext(), v1, articles);
                 break;
             case IMAGEWITHTEXT:
-                View v2 = inflater.inflate(R.layout.item_article_result, parent, false);
+                View v2 = inflater.inflate(R.layout.article_image_text, parent, false);
                 viewHolder = new ViewHolder2(parent.getContext(), v2, articles);
                 break;
 //            default:

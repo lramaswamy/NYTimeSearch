@@ -40,7 +40,7 @@ public class ArticleRecyclerAdapter extends RecyclerView.Adapter<ArticleRecycler
         LayoutInflater inflater = LayoutInflater.from(context);
 
         //Inflate the layout
-        View articleView = inflater.inflate(R.layout.item_article_result, parent, false);
+        View articleView = inflater.inflate(R.layout.article_image_text, parent, false);
 
         //Return a new holder instance
         ViewHolder holder =  new ViewHolder(context, articleView, mArticles);
